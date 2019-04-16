@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+void main()
+{
+    int N,M,i,j,k,A[100];
+    scanf("%d",&N);
+    for(i=0;i<N;i++)
+    scanf("%d",&A[i]);
+    scanf("%d",&M);
+    for(i=0;i<M;i++)
+    {
+        scanf("%d",&k);
+        for(j=N;j>k;j--)
+        A[j]=A[j-1];
+        scanf("%d",&A[k]);
+        N++;
+    }
+    for(i=0;i<N;i++)
+    printf("%d ",A[i]);
+}
